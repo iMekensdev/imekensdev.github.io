@@ -122,6 +122,49 @@
         </div>
     </section>
 
+<section id="stats" class="stats fade-in-up start-anim fade-in">
+    <div class="container">
+        <h2>İstatistikler</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-code-branch"></i>
+                </div>
+                <div class="stat-number" data-target="1">0</div>
+                <div class="stat-label">Toplam Proje</div>
+                <div class="stat-desc">Tamamlanmış Proje</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <div class="stat-number" data-target="3">0</div>
+                <div class="stat-label">Çalıştığım Şirket</div>
+                <div class="stat-desc">Aktif & Geçmiş</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="stat-number" data-target="3">0</div>
+                <div class="stat-label">Yıllık Deneyim</div>
+                <div class="stat-desc">Yazılım Geliştirme</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="stat-number" data-target="3">0</div>
+                <div class="stat-label">Minecraft Sunucu</div>
+                <div class="stat-desc">Geliştirdiğim Sunucular</div>
+            </div>
+        </div>
+    </div>
+</section>
+
     <section id="skills" class="skills fade-in-up start-anim fade-in">
         <div class="container">
             <h2>Yeteneklerim</h2>
@@ -444,6 +487,47 @@ loader.style.display = "none"
 },2000)
 
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    function animateStats() {
+        const statNumbers = document.querySelectorAll('.stat-number');
+        
+        statNumbers.forEach(stat => {
+            const target = parseInt(stat.getAttribute('data-target'));
+            const duration = 2000;
+            const step = target / (duration / 16);
+            let current = 0;
+            
+            const updateNumber = () => {
+                current += step;
+                if (current < target) {
+                    stat.textContent = Math.floor(current);
+                    requestAnimationFrame(updateNumber);
+                } else {
+                    stat.textContent = target;
+                }
+            };
+            
+            updateNumber();
+        });
+    }
+
+    const statsSection = document.querySelector('#stats');
+    
+    if (statsSection) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        observer.observe(statsSection);
+    }
+});
     </script>
 
 </body>
