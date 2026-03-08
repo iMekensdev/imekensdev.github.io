@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 <html lang="tr">
-
 <head>
     <style>
         body {
@@ -46,9 +46,71 @@
             transform: none !important;
             transition: all 0.8s cubic-bezier(.4, 2, .6, 1);
         }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--terminal-green);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--terminal-green);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--terminal-green);
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .stat-icon {
+            font-size: 2rem;
+            color: var(--accent-primary);
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
-
 <body>
 <div id="loader">
     <div class="loader-content">
@@ -66,6 +128,7 @@
             <ul class="nav-menu">
                 <li><a href="#home">Ana Sayfa</a></li>
                 <li><a href="#about">Hakkımda</a></li>
+                <li><a href="#stats">İstatistikler</a></li>
                 <li><a href="#skills">Yeteneklerim</a></li>
                 <li><a href="#projects">Projelerim</a></li>
                 <li><a href="#companies">Şirketler</a></li>
@@ -119,6 +182,35 @@
             <p>Ben mekens, 16 yaşındayım ve 3 yıldır yazılım geliştiriyorum. Front End ve Bukkit/Spigot plugin
                 geliştirme konularında tecrübeliyim. Kod yazmayı, yeni teknolojiler öğrenmeyi ve yaratıcı projeler
                 üretmeyi seviyorum.</p>
+        </div>
+    </section>
+
+    <section id="stats" class="stats fade-in-up start-anim fade-in">
+        <div class="container">
+            <h2>İstatistikler</h2>
+            <div class="stats-grid">
+                <div class="stat-card fade-in">
+                    <div class="stat-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <div class="stat-number" id="total-projects">0</div>
+                    <div class="stat-label">Toplam Proje</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="stat-number" id="total-companies">0</div>
+                    <div class="stat-label">Çalıştığım Şirket</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Yıllık Deneyim</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -314,6 +406,34 @@
     <script src="main.min.js"></script>
 
     <script>
+        function updateStatistics() {
+            const projectCards = document.querySelectorAll('.project-card');
+            let validProjects = 0;
+            
+            projectCards.forEach(card => {
+                const title = card.querySelector('h3')?.textContent || '';
+                const description = card.querySelector('p')?.textContent || '';
+                
+                if (!title.includes('Eklenmedi') && !description.includes('Henüz Eklenmedi')) {
+                    validProjects++;
+                }
+            });
+            
+            const companyCards = document.querySelectorAll('.company-card');
+            const totalCompanies = companyCards.length;
+            
+            const projectsElement = document.getElementById('total-projects');
+            const companiesElement = document.getElementById('total-companies');
+            
+            if (projectsElement) {
+                projectsElement.textContent = validProjects;
+            }
+            
+            if (companiesElement) {
+                companiesElement.textContent = totalCompanies;
+            }
+        }
+
         document.addEventListener('contextmenu', event => event.preventDefault());
 
         document.addEventListener('copy', event => event.preventDefault());
@@ -426,6 +546,8 @@
                     formMessageDiv.className = '';
                 }, 5000);
             }
+            
+            updateStatistics();
         });
 
         window.addEventListener("load", function(){
@@ -447,5 +569,4 @@ loader.style.display = "none"
     </script>
 
 </body>
-
 </html>
