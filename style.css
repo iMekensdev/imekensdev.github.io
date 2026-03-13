@@ -682,10 +682,11 @@ section h2::after {
 }
 
 .companies-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .company-card {
@@ -694,11 +695,12 @@ section h2::after {
     border-radius: 8px;
     padding: 2rem;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 1.5rem;
     min-width: 300px;
     transition: all 0.3s ease;
     font-family: 'JetBrains Mono', monospace;
+    position: relative;
 }
 
 .company-card::before {
@@ -729,6 +731,7 @@ section h2::after {
     display: flex;
     align-items: center;
     justify-content: center;
+    align-self: center;
 }
 
 .company-image {
@@ -764,7 +767,7 @@ section h2::after {
 
 /* Şirket kartları için incele butonu stili */
 .company-btn {
-    margin-top: 1rem;
+    margin-top: auto;
     width: 100%;
     text-align: center;
     background: transparent;
@@ -804,7 +807,6 @@ section h2::after {
 .company-info {
     display: flex;
     flex-direction: column;
-    height: 100%;
     flex: 1;
 }
 
@@ -817,32 +819,9 @@ section h2::after {
     min-height: 320px;
 }
 
-.company-card:first-child .company-info {
-    justify-content: space-between;
-}
-
-.company-card:first-child .company-roles {
-    min-height: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.company-logo {
-    margin-bottom: 1rem;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-}
-
 @media (max-width: 768px) {
     .company-card {
         min-width: 280px;
-        min-height: 300px;
-    }
-    
-    .company-btn {
-        margin-top: 0.8rem;
     }
 }
 
@@ -850,7 +829,6 @@ section h2::after {
     .company-card {
         min-width: 250px;
         padding: 1.5rem;
-        min-height: 280px;
     }
 }
 
