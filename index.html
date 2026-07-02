@@ -133,17 +133,6 @@
                 <li><a href="#companies">Şirketler</a></li>
                 <li><a href="#contact">İletişim</a></li>
             </ul>
-            <div class="theme-controls">
-                <button id="theme-toggle" class="theme-btn">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <div class="color-picker">
-                    <button class="color-btn" data-color="default" style="background: #6d5dfc;"></button>
-                    <button class="color-btn" data-color="blue" style="background: #3b82f6;"></button>
-                    <button class="color-btn" data-color="red" style="background: #ef4444;"></button>
-                    <button class="color-btn" data-color="green" style="background: #10b981;"></button>
-                </div>
-            </div>
             <div class="hamburger">
                 <span></span><span></span><span></span>
             </div>
@@ -434,7 +423,6 @@ class="fab fa-github"></i></a>
 
         document.addEventListener('DOMContentLoaded', function () {
             const themeToggleBtn = document.getElementById('theme-toggle');
-            const colorButtons = document.querySelectorAll('.color-btn');
             const body = document.body;
             const themeIcon = themeToggleBtn.querySelector('i');
 
@@ -459,37 +447,6 @@ class="fab fa-github"></i></a>
                     themeIcon.classList.add('fa-moon');
                     localStorage.setItem('theme', 'dark');
                 }
-            });
-
-            const savedColor = localStorage.getItem('color') || 'default';
-
-            colorButtons.forEach(btn => {
-                const color = btn.dataset.color;
-                if (color === savedColor) {
-                    btn.classList.add('active');
-                    if (color !== 'default') {
-                        body.classList.add(`theme-${color}`);
-                    } else {
-                        body.classList.remove('theme-blue', 'theme-red', 'theme-green');
-                    }
-                }
-            });
-
-            colorButtons.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const selectedColor = btn.dataset.color;
-
-                    colorButtons.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-
-                    body.classList.remove('theme-blue', 'theme-red', 'theme-green');
-
-                    if (selectedColor !== 'default') {
-                        body.classList.add(`theme-${selectedColor}`);
-                    }
-
-                    localStorage.setItem('color', selectedColor);
-                });
             });
 
             const contactForm = document.getElementById('contact-form');
