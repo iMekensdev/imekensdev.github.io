@@ -39,11 +39,13 @@ body {
     padding: 0 28px;
 }
 
+/* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: var(--bg-alt); }
 ::-webkit-scrollbar-thumb { background: var(--line-2); border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--ink-3); }
 
+/* ===== NAVBAR ===== */
 .navbar {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -125,6 +127,7 @@ body {
     transition: all .3s var(--ease);
 }
 
+/* ===== HERO ===== */
 .hero {
     padding: 160px 0 100px;
     position: relative;
@@ -178,17 +181,19 @@ body {
     50% { opacity: .5; transform: scale(1.3); }
 }
 
+/* .hero-text h1 */
 .hero-text h1 {
     font-family: var(--serif);
     font-size: clamp(2.8rem, 5.5vw, 4.8rem);
-    font-weight: 500;
-    font-variation-settings: 'SOFT' 50, 'WONK' 1;
+    font-weight: 500;               /* 400 yerine 500 */
+    font-variation-settings: 'SOFT' 50, 'WONK' 1;  /* Fraunces karakteri */
     line-height: 1.02;
     letter-spacing: -.025em;
     color: var(--ink);
     margin-bottom: 28px;
 }
 
+/* .section-head h2 */
 .section-head h2 {
     font-family: var(--serif);
     font-size: clamp(2.2rem, 4vw, 3.2rem);
@@ -200,6 +205,7 @@ body {
     max-width: 640px;
 }
 
+/* .logo */
 .logo {
     font-family: var(--serif);
     font-size: 1.6rem;
@@ -289,6 +295,7 @@ body {
     font-size: .82rem;
 }
 
+/* ===== HERO IMAGE ===== */
 .hero-visual {
     position: relative;
     display: flex;
@@ -368,6 +375,7 @@ body {
     50% { transform: translateY(-10px); }
 }
 
+/* ===== SOCIAL ===== */
 .social-links {
     display: flex;
     gap: 10px;
@@ -393,6 +401,7 @@ body {
     transform: translateY(-3px);
 }
 
+/* ===== SECTION HEAD ===== */
 section {
     padding: 100px 0;
     position: relative;
@@ -418,6 +427,7 @@ section {
     background: var(--accent);
 }
 
+/* Project features list */
 .project-features {
     list-style: none;
     margin: 0 0 20px 0;
@@ -465,6 +475,7 @@ section {
     color: var(--accent);
 }
 
+/* ===== ABOUT ===== */
 .about {
     background: var(--bg-alt);
     border-top: 1px solid var(--line);
@@ -560,6 +571,7 @@ section {
     letter-spacing: .08em;
 }
 
+/* ===== SKILLS ===== */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -630,6 +642,7 @@ section {
     z-index: 1;
 }
 
+/* ===== PROJECTS ===== */
 .projects {
     background: var(--bg-alt);
     border-top: 1px solid var(--line);
@@ -771,6 +784,7 @@ section {
     font-size: .75rem;
 }
 
+/* ===== COMPANIES ===== */
 .companies-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -907,6 +921,7 @@ section {
     transform: translateX(4px);
 }
 
+/* ===== CONTACT ===== */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
@@ -1109,6 +1124,7 @@ section {
     border: 1px solid rgba(232, 93, 42, .3);
 }
 
+/* ===== FOOTER ===== */
 .footer {
     background: var(--ink);
     color: var(--bg);
@@ -1145,6 +1161,7 @@ section {
     color: var(--accent);
 }
 
+/* ===== LOADER ===== */
 #loader {
     position: fixed;
     inset: 0;
@@ -1205,6 +1222,7 @@ section {
     letter-spacing: .1em;
 }
 
+/* ===== REVEAL ===== */
 .reveal {
     opacity: 0;
     transform: translateY(24px);
@@ -1216,6 +1234,7 @@ section {
     transform: none;
 }
 
+/* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
     .hero-flex { grid-template-columns: 1fr; gap: 60px; text-align: center; }
     .hero-text { display: flex; flex-direction: column; align-items: center; }
