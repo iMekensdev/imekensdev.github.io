@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mekens.dev</title>
+<link rel="icon" href="img/image.gif">
+<link rel="stylesheet" href="style.css?v=10">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+    <div class="loader-content">
+        <div class="loader-logo">mekens.dev</div>
+        <div class="loader-bar"><div class="loader-progress"></div></div>
+        <p class="loader-text">Yükleniyor</p>
+    </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="container nav-flex">
+        <a href="#home" class="logo">mekens<span></span></a>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home" class="active">Ana Sayfa</a></li>
+            <li><a href="#about">Hakkımda</a></li>
+            <li><a href="#skills">Yetenekler</a></li>
+            <li><a href="#projects">Projeler</a></li>
+            <li><a href="#companies">Şirketler</a></li>
+            <li><a href="#contact" class="nav-cta">İletişim</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+    <div class="container hero-flex">
+        <div class="hero-text reveal">
+            <div class="hero-eyebrow">Müsait — Yeni projelere açık</div>
+            <h1>Merhaba, ben <em>mekens.</em></h1>
+            <p>
+                17 yaşındayım, <strong>4 yıldır yazılım geliştiriyorum.</strong> 
+                Bukkit/Spigot plugin'leri ve modern web teknolojileriyle 
+                dijital deneyimler inşa ediyorum.
+            </p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary">İletişime Geç</i></a>
+                <a href="#projects" class="btn btn-secondary">Projelerim</i></a>
+            </div>
+            <div class="social-links">
+                <a href="https://discord.com/users/962366918805823518" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+                <a href="https://github.com/imekensdev" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="hero-visual reveal">
+            <div class="hero-img-frame">
+                <img src="img/image.gif" alt="mekens">
+                <div class="hero-badge hb-1"><i class="fab fa-java"></i>Java</div>
+                <div class="hero-badge hb-2"><i class="fab fa-js"></i>JS</div>
+                <div class="hero-badge hb-3"><i class="fas fa-cube"></i>Spigot</div>
+                <div class="hero-badge hb-4"><i class="fab fa-php"></i>PHP</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="section-head reveal">
+            <div>
+                <div class="section-label">01 — Hakkımda</div>
+                <h2>Kod yazmayı, üretmeyi ve sınırları <em>zorlamayı</em> seviyorum.</h2>
+            </div>
+        </div>
+        <div class="about-grid">
+            <div class="about-text reveal">
+                <p>
+                    Ben <strong>mekens</strong>, 17 yaşındayım ve <strong>4 yıldır</strong> yazılım geliştiriyorum. 
+                    Front-end ve <strong>Bukkit/Spigot plugin</strong> geliştirme konularında tecrübeliyim.
+                </p>
+                <p>
+                    Kod yazmayı, yeni teknolojiler öğrenmeyi ve yaratıcı projeler üretmeyi seviyorum. 
+                    Her projede kullanıcı deneyimini ön planda tutarak, temiz ve sürdürülebilir kod yazmaya özen gösteriyorum.
+                </p>
+            </div>
+            <div class="stats-grid reveal">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="stat-number" id="total-projects">3</div>
+                    <div class="stat-label">Proje</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-building"></i></div>
+                    <div class="stat-number" id="total-companies">3</div>
+                    <div class="stat-label">Şirket</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-code"></i></div>
+                    <div class="stat-number">4+</div>
+                    <div class="stat-label">Yıl Deneyim</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-fire"></i></div>
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Tutku</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="skills">
+    <div class="container">
+        <div class="section-head reveal">
+            <div>
+                <div class="section-label">02 — Yetenekler</div>
+                <h2>Kullandığım <em>teknolojiler</em></h2>
+            </div>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card reveal">
+                <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                <span>HTML5</span>
+                <small>Markup</small>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                <span>CSS3</span>
+                <small>Styling</small>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon"><i class="fab fa-js"></i></div>
+                <span>JavaScript</span>
+                <small>Frontend</small>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon"><i class="fab fa-java"></i></div>
+                <span>Java</span>
+                <small>Backend</small>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon"><i class="fab fa-php"></i></div>
+                <span>PHP</span>
+                <small>Backend</small>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon"><i class="fas fa-database"></i></div>
+                <span>MySQL</span>
+                <small>Database</small>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon"><i class="fas fa-cube"></i></div>
+                <span>Bukkit/Spigot</span>
+                <small>Minecraft</small>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                <span>Git</span>
+                <small>Version</small>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon"><i class="fab fa-linux"></i></div>
+                <span>Linux</span>
+                <small>OS</small>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon"><i class="fas fa-server"></i></div>
+                <span>Paper API</span>
+                <small>Minecraft</small>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon"><i class="fas fa-paint-brush"></i></div>
+                <span>UI / UX</span>
+                <small>Tasarım</small>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon"><i class="fab fa-bootstrap"></i></div>
+                <span>Bootstrap</span>
+                <small>Framework</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+    <div class="container">
+        <div class="section-head reveal">
+            <div>
+                <div class="section-label">03 — Projeler</div>
+                <h2>Son <em>çalışmalarım</em></h2>
+            </div>
+        </div>
+        <div class="projects-grid">
+
+            <div class="project-card reveal">
+                <div class="project-image">
+                    <img src="img/survivaltitanium.png" alt="Lexus Network">
+                </div>
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-tag">Bukkit</span>
+                        <span class="project-tag">Plugin</span>
+                    </div>
+                    <h3>Lexus Network — Kutucu Furkan</h3>
+                    <p>
+                            Bukkit altyapısı ile Lexus Network sunucusu için Kutucu Furkan sistemi geliştirildi.
+
+                            Oyuncular artık Kutucu Furkan üzerinden özel kutulara erişebilir ve çeşitli ödüller
+                            kazanabilirler.
+
+                            Sistem, oyuncuların farklı kutuları açarak nadir eşyalar, ekipmanlar ve çeşitli sürpriz
+                            ödüller elde edebileceği bir mekanik sunar.
+
+                            Kutuların içeriği oyunculara oyunda avantaj sağlayabilecek çeşitli eşyalar ve ödüller
+                            barındıracak şekilde hazırlanmıştır.
+
+                            Kutucu Furkan sistemi, sunucu ekonomisini ve oyuncu etkileşimini destekleyen gelişmiş bir
+                            ödül ve kutu mekanizması olarak tasarlanmıştır.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://discord.gg/lexusnetwork" target="_blank" class="project-link">
+                            İncele</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-image">
+                    <img src="img/lastshow.png" alt="lastshow.xyz">
+                </div>
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-tag">PHP</span>
+                        <span class="project-tag">Web</span>
+                    </div>
+                    <h3>lastshow.xyz — Dijital Profil</h3>
+                    <p>
+PHP altyapısı ile geliştirilen bu sistem, kullanıcıların kendi dijital kimliklerini tek bir sayfa üzerinden oluşturabilmelerini sağlar.
+
+Kullanıcılar artık profil, bağlantılar ve kişisel içeriklerini tek bir link altında toplayarak modern ve düzenli bir görünüm elde edebilirler.
+
+Sistem, saniyeler içinde kişisel sayfa oluşturma imkânı sunarak hızlı ve pratik bir kullanım deneyimi sağlar.
+
+Her kullanıcı kendi tarzına uygun tasarımı seçebilir, sosyal medya ve diğer bağlantılarını kolayca yönetebilir.
+
+lastshow.xyz Dijital Profil Sistemi, dijital varlığını profesyonel şekilde sergilemek isteyen kullanıcılar için modern, hızlı ve esnek bir profil oluşturma çözümü olarak tasarlanmıştır.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://lastshow.xyz" target="_blank" class="project-link">
+                            İncele</i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+<div class="project-card reveal">
+    <div class="project-image">
+        <img src="img/arenapvp.png" alt="Maze Network — Arena PvP">
+    </div>
+    <div class="project-content">
+        <div class="project-meta">
+            <span class="project-tag">Java</span>
+            <span class="project-tag">Spigot</span>
+            <span class="project-tag">Paper</span>
+            <span class="project-tag">MySQL</span>
+        </div>
+        <h3>Maze Network — Arena PvP</h3>
+        <p>
+            Uzun zamandır beklenen yeni oyun modu <strong>Arena PvP</strong> artık aktif. 
+            Oyuncular birbirinden farklı savaşlara katılarak <strong>derece kazanıyor</strong>, 
+            sıralamada yükseliyor ve maç sonunda çeşitli <strong>ödüllerin</strong> sahibi oluyor.
+        </p>
+        <ul class="project-features">
+            <li><strong>Düellolar</strong> — Rakiplerinle karşı karşıya gel, yeteneklerini konuştur.</li>
+            <li><strong>Dereceli maçlar</strong> — Sana uygun rakiplerle mücadele ederek sıralamada yüksel.</li>
+            <li><strong>Derecesiz maçlar</strong> — Arkadaşlarınla sıralama kaygısı olmadan eğlenceli maçlar yap.</li>
+            <li><strong>Özel oyun modları</strong> — Arena PvP deneyimini sonuna kadar yaşa.</li>
+        </ul>
+        <p>
+            Altyapıda <strong>Java, Spigot/Paper API ve MySQL</strong> kullanıldı. 
+            Sunucuya özel oyun mekanikleri, GUI'ler ve ekonomi sistemleri geliştirildi. 
+            Ayrıca sunucuyla entegre çalışan <strong>özel Maze Client</strong> üzerinde 
+            Minecraft 1.8.9 tabanlı geliştirmeler yapıldı.
+        </p>
+        <div class="project-links">
+            <a href="https://www.youtube.com/watch?v=8Csd_zip-Tc" target="_blank" class="project-link">
+                İncele</i>
+            </a>
+        </div>
+    </div>
+</div>
+
+            <div class="project-card reveal">
+                <div class="project-image">
+                    <div class="placeholder-icon"><i class="fas fa-plus"></i></div>
+                </div>
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-tag">Yakında</span>
+                    </div>
+                    <div class="project-links">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- COMPANIES -->
+<section id="companies" class="companies">
+    <div class="container">
+        <div class="section-head reveal">
+            <div>
+                <div class="section-label">04 — Deneyim</div>
+                <h2>Çalıştığım <em>şirketler</em></h2>
+            </div>
+        </div>
+        <div class="companies-grid">
+
+            <div class="company-card reveal">
+                <div class="company-head">
+                    <div class="company-logo">
+                        <img src="img/lexusnetwork.png" alt="Lexus & Rose Network" class="company-image">
+                    </div>
+                    <div class="company-info">
+                        <h3>Lexus & Rose Network</h3>
+                        <span class="company-period">2023 — Şu an</span>
+                    </div>
+                </div>
+                <ul class="company-roles">
+                    <li>Geliştirici</li>
+                    <li>Topluluk Yöneticisi</li>
+                    <li>Sunucu Yöneticisi</li>
+                </ul>
+                <a href="https://lexusnw.com.tr" target="_blank" class="company-btn">
+                    İncele</i>
+                </a>
+            </div>
+
+            <div class="company-card reveal">
+                <div class="company-head">
+                    <div class="company-logo">
+                        <img src="img/lastshow.png" alt="lastshow.xyz" class="company-image">
+                    </div>
+                    <div class="company-info">
+                        <h3>lastshow.xyz</h3>
+                        <span class="company-period">2024 — Şu an</span>
+                    </div>
+                </div>
+                <ul class="company-roles">
+                    <li>Geliştirici</li>
+                    <li>Topluluk Yöneticisi</li>
+                    <li>Sunucu Yöneticisi</li>
+                </ul>
+                <a href="https://lastshow.xyz" target="_blank" class="company-btn">
+                    İncele</i>
+                </a>
+            </div>
+
+            <div class="company-card reveal">
+                <div class="company-head">
+                    <div class="company-logo">
+                        <img src="img/mazenetwork.png" alt="Maze Network" class="company-image">
+                    </div>
+                    <div class="company-info">
+                        <h3>Maze Network</h3>
+                        <span class="company-period">2024 — Şu an</span>
+                    </div>
+                </div>
+                <ul class="company-roles">
+                    <li>Geliştirici</li>
+                    <li>Topluluk Yöneticisi</li>
+                    <li>Sunucu Yöneticisi</li>
+                </ul>
+                <a href="https://mazenw.com.tr" target="_blank" class="company-btn">
+                    İncele</i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-intro reveal">
+                <div class="section-label">05 — İletişim</div>
+                <h2>Birlikte bir şeyler <em>inşa edelim.</em></h2>
+                <p>Bir proje fikrin mi var? İş birliği yapmak veya sadece merhaba demek için bana ulaşabilirsin.</p>
+                <div class="contact-info-list">
+                    <a href="https://discord.com/users/962366918805823518" target="_blank" class="contact-info-item">
+                        <div class="ci-icon"><i class="fab fa-discord"></i></div>
+                        <div class="ci-text">
+                            <span class="ci-label">Discord</span>
+                            <span class="ci-value">mekens</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/imekensdev" target="_blank" class="contact-info-item">
+                        <div class="ci-icon"><i class="fab fa-github"></i></div>
+                        <div class="ci-text">
+                            <span class="ci-label">GitHub</span>
+                            <span class="ci-value">@imekensdev</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <form id="contact-form" class="reveal">
+                <div class="form-row">
+                    <div class="form-field">
+                        <label for="name">Adın</label>
+                        <input type="text" id="name" name="name" placeholder="Adınız" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">E-posta</label>
+                        <input type="email" id="email" name="email" placeholder="mekens@mekens.dev" required>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label for="subject">Konu</label>
+                    <input type="text" id="subject" name="subject" placeholder="Ne hakkında konuşmak istersin?" required>
+                </div>
+                <div class="form-field">
+                    <label for="message">Mesaj</label>
+                    <textarea id="message" name="message" placeholder="Mesajını buraya yaz..." required></textarea>
+                </div>
+                <button type="submit">Mesajı Gönder</i></button>
+                <div id="form-message"></div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container footer-flex">
+        <p>© 2026 mekens.dev — Tüm hakları saklıdır.</p>
+        <div class="footer-links">
+            <a href="#home">Yukarı çık ↑</a>
+            <a href="https://github.com/imekensdev" target="_blank">GitHub</a>
+            <a href="https://discord.com/users/962366918805823518" target="_blank">Discord</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+// LOADER
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        const loader = document.getElementById('loader');
+        loader.style.opacity = '0';
+        setTimeout(() => loader.style.display = 'none', 500);
+    }, 1500);
+});
+
+// MOBILE MENU
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('navMenu');
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+});
+navMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+    });
+});
+
+// ACTIVE NAV
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if (e.isIntersecting) {
+            navLinks.forEach(a => a.classList.remove('active'));
+            const link = document.querySelector(`.nav-menu a[href="#${e.target.id}"]`);
+            if (link) link.classList.add('active');
+        }
+    });
+}, { rootMargin: '-40% 0px -55% 0px' });
+sections.forEach(s => navObserver.observe(s));
+
+// REVEAL
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => entry.target.classList.add('in'), i * 60);
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// FORM
+const form = document.getElementById('contact-form');
+const formMessage = document.getElementById('form-message');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const subject = form.subject.value.trim();
+    const message = form.message.value.trim();
+
+    if (!name || !email || !subject || !message) {
+        showMsg('Lütfen tüm alanları doldurun.', 'error');
+        return;
+    }
+    if (!email.includes('@') || !email.includes('.')) {
+        showMsg('Geçerli bir e-posta adresi girin.', 'error');
+        return;
+    }
+    showMsg('Mesajınız gönderiliyor...', 'info');
+    setTimeout(() => {
+        showMsg('Mesajınız başarıyla gönderildi.', 'success');
+        form.reset();
+    }, 1400);
+});
+
+function showMsg(text, type) {
+    formMessage.textContent = text;
+    formMessage.className = 'form-message ' + type;
+    clearTimeout(showMsg.t);
+    showMsg.t = setTimeout(() => {
+        formMessage.textContent = '';
+        formMessage.className = 'form-message';
+    }, 5000);
+}
+
+// STATS
+document.addEventListener('DOMContentLoaded', () => {
+    const validProjects = [...document.querySelectorAll('.project-card')].filter(card => {
+        const title = card.querySelector('h3')?.textContent || '';
+        return !title.toLowerCase().includes('yeni proje');
+    }).length;
+    const totalCompanies = document.querySelectorAll('.company-card').length;
+    const pEl = document.getElementById('total-projects');
+    const cEl = document.getElementById('total-companies');
+    if (pEl) pEl.textContent = validProjects;
+    if (cEl) cEl.textContent = totalCompanies;
+});
+</script>
+
+</body>
+</html>
